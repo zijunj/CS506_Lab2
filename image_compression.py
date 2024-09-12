@@ -7,11 +7,11 @@ def load_image(image_path):
     raise NotImplementedError('You need to implement this function')
 
 # Function to perform KMeans clustering for image quantization
-def image_quantization(image_np, n_colors):
+def image_compression(image_np, n_colors):
     raise NotImplementedError('You need to implement this function')
 
 # Function to concatenate and save the original and quantized images side by side
-def save_side_by_side_image(original_image_np, quantized_image_np, output_path):
+def save_result(original_image_np, quantized_image_np, output_path):
     # Convert NumPy arrays back to PIL images
     original_image = Image.fromarray(original_image_np)
     quantized_image = Image.fromarray(quantized_image_np)
@@ -37,7 +37,7 @@ def __main__():
 
     # Perform image quantization using KMeans
     n_colors = 8  # Number of colors to reduce the image to, you may change this to experiment
-    quantized_image_np = image_quantization(image_np, n_colors)
+    quantized_image_np = image_compression(image_np, n_colors)
 
     # Save the original and quantized images side by side
-    save_side_by_side_image(image_np, quantized_image_np, output_path)
+    save_result(image_np, quantized_image_np, output_path)

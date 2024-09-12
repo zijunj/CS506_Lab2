@@ -1,62 +1,57 @@
-# Image Quantization using KMeans Clustering
+# Image Compression using KMeans
 
-## Overview
-This project demonstrates how to perform image quantization using KMeans clustering. The script takes an input image, reduces the number of unique colors using KMeans, and saves a new image with the original and quantized versions displayed side by side.
+---
 
-## How it Works
-1. **Image Loading**: The image is loaded and preprocessed into a NumPy array.
-2. **KMeans Clustering**: The pixel colors are clustered into `n_colors` clusters using the KMeans algorithm.
-3. **Image Quantization**: Each pixel is assigned the color of its nearest cluster centroid, reducing the number of distinct colors in the image.
-4. **Saving Results**: The original and quantized images are saved side by side in a new image file.
+**To get credit for the assignment, please submit your code and results through the designated submission platform.**
 
-## File Description
+**Goals**:
 
-- **`load_image(image_path)`**: This function is responsible for loading an image from a file path and returning it as a NumPy array. You need to implement this function.
-  
-- **`image_quantization(image_np, n_colors)`**: This function takes the image NumPy array and applies KMeans clustering to reduce the number of colors. You need to implement this function.
+1. Learn how to apply KMeans clustering for image compression.
+2. Implement basic image processing tasks.
+3. Practice working with external libraries such as `scikit-learn`, `numpy`, and `Pillow`.
+4. Understand how to manipulate images as NumPy arrays and perform color reduction.
 
-- **`save_side_by_side_image(original_image_np, quantized_image_np, output_path)`**: This function saves the original and quantized images side by side.
+**Working in pairs is allowed but not required.**
 
-- **`__main__()`**: The main function that loads an image, performs quantization, and saves the result.
+## Part 0: Setup Environment
 
-## Setup Instructions
+1. Install Python 3.8 or higher: [link](https://python.org/downloads).
+2. Install the required libraries:
+    - From the terminal, run: `pip install numpy scikit-learn pillow`
 
-### Prerequisites
-Ensure you have the following Python packages installed:
+## Part 1: Implementing Image Compression
 
-``` bash
-pip install numpy scikit-learn pillow
-```
+1. **Complete the following functions in the provided script**:
+    - `load_image(image_path)`: This function should load the image from a file and return it as a NumPy array. You will need to use the `Pillow` library for this task.
+    - `image_compression(image_np, n_colors)`: Implement KMeans clustering using `scikit-learn` to reduce the number of colors in the image to `n_colors`. The function should return a compressed version of the image.
+2. **Save the Compressed Image**: The function `save_result` has been provided for you. Once the original and compressed images are prepared, the function will save them side by side in a single image file.
 
-### Implement the Missing Functions
-You need to implement the following two functions:
+## Part 2: Running Your Code
 
-1. **`load_image(image_path)`**: This function should load the image from the given path and return it as a NumPy array.
-2. **`image_quantization(image_np, n_colors)`**: This function should take a NumPy array representing the image and the number of colors, then apply KMeans clustering to quantize the image.
+1. Modify the `__main__()` function to load the image, apply compression, and save the results. Make sure you provide paths for both input and output images.
+2. Choose your favorite image as input and experiment with different values of `n_colors` (e.g., 4, 8, 16) and observe the effect on image quality.
 
-### How to Run
+## Example Workflow
 
-1. Implement the missing functions.
-2. Run the script using Python:
+1. Select your favorite image file (e.g., `'favorite_image.png'`) and place it in your working directory.
+2. In the `__main__()` function:
+    - Set `image_path` to your selected image file.
+    - Set `output_path` to where you want to save the side-by-side result (e.g., `'compressed_image.png'`).
+    - Choose an appropriate number of colors (`n_colors`), e.g., 8.
+3. Run the script in your terminal:
+   
+   python image_compression.py
 
-``` bash
-python image_quantization.py
-```
+4. Check the output image to see the original and compressed versions side by side.
 
-This will:
-- Load the image specified in **`image_path`**.
-- Apply KMeans clustering to quantize the image into **`n_colors`**.
-- Save the result as **`result.png`** with the original and quantized images side by side.
+## Part 3: Submit Your Work
 
-### Example Usage
+1. Submit the following files:
+    - Your completed Python script.
+    - The resulting image file(s) showing the original and compressed images.
 
-In the **`__main__()`** function, specify:
-- **`image_path`**: The path to your input image (e.g., `'input.png'`).
-- **`output_path`**: The path where the side-by-side image will be saved (e.g., `'result.png'`).
-- **`n_colors`**: The number of colors to which the image will be reduced.
+## Notes:
 
-Experiment with different values for **`n_colors`** to see how it affects the output image.
-
-## Notes
-- Ensure that the image loaded is in RGB format.
-- Make sure to experiment with different images and color values to observe the effect of quantization.
+1. Ensure that the image loaded is in RGB format.
+2. Test with your favorite image and experiment with different values for `n_colors` to observe the impact of compression.
+3. If you encounter issues loading or saving images, check the installation of `Pillow` and the file format compatibility.
