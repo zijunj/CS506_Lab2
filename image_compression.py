@@ -31,8 +31,8 @@ def save_result(original_image_np, quantized_image_np, output_path):
 
 def __main__():
     # Load and process the image
-    image_path = 'input.png'  
-    output_path = 'result.png'  
+    image_path = 'favorite_image.png'  
+    output_path = 'compressed_image.png'  
     image_np = load_image(image_path)
 
     # Perform image quantization using KMeans

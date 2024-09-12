@@ -1,15 +1,14 @@
-# Image Compression using KMeans
+# Lab02: Image Compression using KMeans
 
 ---
 
-**To get credit for the assignment, please submit your code and results through the designated submission platform.**
+**To get credit for the lab, please show the completed work to a lab TA. They will check you off.**
 
 **Goals**:
 
 1. Learn how to apply KMeans clustering for image compression.
 2. Implement basic image processing tasks.
 3. Practice working with external libraries such as `scikit-learn`, `numpy`, and `Pillow`.
-4. Understand how to manipulate images as NumPy arrays and perform color reduction.
 
 **Working in pairs is allowed but not required.**
 
@@ -28,7 +27,7 @@
 
 ## Part 2: Running Your Code
 
-1. Modify the `__main__()` function to load the image, apply compression, and save the results. Make sure you provide paths for both input and output images.
+1. Modify functions to load the image, apply compression, and save the results. Make sure you provide paths for both input and output images.
 2. Choose your favorite image as input and experiment with different values of `n_colors` (e.g., 4, 8, 16) and observe the effect on image quality.
 
 ## Example Workflow
@@ -40,15 +39,11 @@
     - Choose an appropriate number of colors (`n_colors`), e.g., 8.
 3. Run the script in your terminal:
    
+``` bash
    python image_compression.py
+```
 
 4. Check the output image to see the original and compressed versions side by side.
-
-## Part 3: Submit Your Work
-
-1. Submit the following files:
-    - Your completed Python script.
-    - The resulting image file(s) showing the original and compressed images.
 
 ## Notes:
 
