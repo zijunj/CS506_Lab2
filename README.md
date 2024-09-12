@@ -27,11 +27,6 @@
 
 ## Part 2: Running Your Code
 
-1. Modify functions to load the image, apply compression, and save the results. Make sure you provide paths for both input and output images.
-2. Choose your favorite image as input and experiment with different values of `n_colors` (e.g., 4, 8, 16) and observe the effect on image quality.
-
-## Example Workflow
-
 1. Select your favorite image file and place it in your working directory.
 2. In the `__main__()` function:
     - Set `image_path` to your selected image file.
