@@ -1,4 +1,4 @@
-# Lab02: Image Compression using KMeans
+# Lab 2: Image Compression using KMeans
 
 ---
 
@@ -32,7 +32,7 @@
 
 ## Example Workflow
 
-1. Select your favorite image file (e.g., `'favorite_image.png'`) and place it in your working directory.
+1. Select your favorite image file and place it in your working directory.
 2. In the `__main__()` function:
     - Set `image_path` to your selected image file.
     - Set `output_path` to where you want to save the side-by-side result (e.g., `'compressed_image.png'`).
